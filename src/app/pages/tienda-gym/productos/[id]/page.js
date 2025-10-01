@@ -4,6 +4,7 @@ import { useState, useEffect, use } from 'react'; // Se importa 'use'
 import { useRouter } from 'next/navigation';
 import { allProperties } from '../../products'; 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PropertyDetailPage({ params }) {
   const router = useRouter();
