@@ -26,7 +26,7 @@ const PropertyCard = ({ property, viewMode, onClick }) => {
                  style={{ boxShadow: 'inset 0 0 0px 2px rgba(234, 179, 8, 0.5)' }}></div> {/* Acento Dorado */}
 
             <div className={`relative overflow-hidden ${viewMode === 'list' ? 'sm:w-2/5 flex-shrink-0' : ''}`}>
-                <img src={property.image} alt={property.name} className={`object-cover w-full transition-transform duration-300 ${viewMode === 'list' ? 'h-full' : 'h-56'} group-hover:scale-105`} />
+                <image src={property.image} alt={property.name} className={`object-cover w-full transition-transform duration-300 ${viewMode === 'list' ? 'h-full' : 'h-56'} group-hover:scale-105`} />
                 <div className="absolute top-3 right-3 bg-emerald-700 text-white px-3 py-1 text-xs font-bold rounded-full shadow-md">
                     Ahorro {property.ahorro}
                 </div>

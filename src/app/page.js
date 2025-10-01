@@ -47,7 +47,7 @@ const featuredProperties = allProperties.slice(0, 3);
   return (
     <main>
       <section className="relative h-[85vh] min-h-[650px] flex items-center text-white overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Casa moderna de lujo" className="absolute inset-0 w-full h-full object-cover"/>
+        <image src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Casa moderna de lujo" className="absolute inset-0 w-full h-full object-cover"/>
         <div className="absolute inset-0 bg-stone-900/60 backdrop-brightness-75"></div>
         <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white drop-shadow-lg">La Forma Inteligente de Invertir en Bienes Raíces</h1>
@@ -70,7 +70,7 @@ const featuredProperties = allProperties.slice(0, 3);
             {featuredProperties.map((prop) => (
               <div key={prop.id} className="bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
                 <div className="relative">
-                  <img src={prop.image} alt={prop.alt} className="w-full h-64 object-cover" />
+                  <image src={prop.image} alt={prop.alt} className="w-full h-64 object-cover" />
                   <div className="absolute top-4 right-4 bg-emerald-700 text-white px-3 py-1 text-xs font-bold rounded-full">Ahorro {prop.ahorro}</div>
                 </div>
                 <div className="p-6">
@@ -157,7 +157,7 @@ const featuredProperties = allProperties.slice(0, 3);
               <div key={story.id} className="flex flex-col rounded-2xl bg-white shadow-lg border border-neutral-200">
                 <div className="flex-1 relative p-8">
                   <div className="flex items-center gap-x-4 mb-4">
-                    <img className="h-12 w-12 rounded-full bg-gray-50 object-cover" src={story.image} alt={`Foto de ${story.author}`} />
+                    <image className="h-12 w-12 rounded-full bg-gray-50 object-cover" src={story.image} alt={`Foto de ${story.author}`} />
                     <div>
                       <div className="text-base font-semibold text-stone-900">{story.author}</div>
                       <div className="text-stone-600 text-sm">{story.stats}</div>

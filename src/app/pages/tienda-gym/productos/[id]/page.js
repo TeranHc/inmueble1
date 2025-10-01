@@ -169,7 +169,7 @@ export default function PropertyDetailPage({ params }) {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div className="p-6 flex items-center justify-center">
               <div className="aspect-square bg-gray-100 rounded-lg w-full flex items-center justify-center">
-                <img src={property.image} alt={property.alt} className="max-w-full max-h-full object-contain" />
+                <image src={property.image} alt={property.alt} className="max-w-full max-h-full object-contain" />
               </div>
             </div>
             <div className="p-6 flex flex-col">
@@ -200,7 +200,7 @@ className="w-full md:w-auto group/btn bg-gradient-to-r from-amber-600 to-amber-7
               {relatedProperties.map((relatedProperty) => (
                 <div key={relatedProperty.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border" onClick={() => handlePropertyClick(relatedProperty.id)}>
                   <div className="aspect-square bg-white flex items-center justify-center p-4">
-                    <img src={relatedProperty.image} alt={relatedProperty.alt} className="max-w-full max-h-full object-contain" />
+                    <image src={relatedProperty.image} alt={relatedProperty.alt} className="max-w-full max-h-full object-contain" />
                   </div>
                   <div className="p-4">
                     <span className="inline-block bg-gray-200 text-gray-700 px-2 py-1 text-xs font-semibold rounded-full mb-2">{relatedProperty.primaryCategory}</span>
