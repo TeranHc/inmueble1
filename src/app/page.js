@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from "next/image";
+
 
 // --- SE USA LA RUTA DE IMPORTACIÓN CORRECTA ---
 import { allProperties } from './pages/tienda-gym/products';
@@ -47,8 +49,12 @@ const featuredProperties = allProperties.slice(0, 3);
   return (
     <main>
       <section className="relative h-[85vh] min-h-[650px] flex items-center text-white overflow-hidden">
-        <image src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Casa moderna de lujo" className="absolute inset-0 w-full h-full object-cover"/>
-        <div className="absolute inset-0 bg-stone-900/60 backdrop-brightness-75"></div>
+<Image
+  src="/casas/1.png"
+  alt="Casa moderna de lujo"
+  fill
+  className="object-cover"
+/>        <div className="absolute inset-0 bg-stone-900/60 backdrop-brightness-75"></div>
         <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white drop-shadow-lg">La Forma Inteligente de Invertir en Bienes Raíces</h1>
           <p className="text-lg sm:text-xl text-stone-200 mb-10 max-w-3xl mx-auto drop-shadow-md">Accede a propiedades de alto valor con descuentos de hasta el 60% a través de nuestro modelo de inversión legal y transparente.</p>
@@ -69,10 +75,16 @@ const featuredProperties = allProperties.slice(0, 3);
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProperties.map((prop) => (
               <div key={prop.id} className="bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
-                <div className="relative">
-                  <image src={prop.image} alt={prop.alt} className="w-full h-64 object-cover" />
-                  <div className="absolute top-4 right-4 bg-emerald-700 text-white px-3 py-1 text-xs font-bold rounded-full">Ahorro {prop.ahorro}</div>
-                </div>
+{/* --- CÓDIGO CORREGIDO --- */}
+<div className="relative h-64 w-full"> {/* <-- 1. El tamaño (h-64) se pone en el div contenedor */}
+  <Image 
+    src={prop.image} 
+    alt={prop.alt} 
+    fill // <-- 2. Se añade la propiedad 'fill'
+    style={{ objectFit: 'cover' }} // <-- 3. Se reemplaza la clase 'object-cover' por esto
+  />
+  <div className="absolute top-4 right-4 bg-emerald-700 text-white px-3 py-1 text-xs font-bold rounded-full">Ahorro {prop.ahorro}</div>
+</div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-yellow-600">{prop.primaryCategory}</span>
@@ -156,13 +168,21 @@ const featuredProperties = allProperties.slice(0, 3);
             {successStories.map((story) => (
               <div key={story.id} className="flex flex-col rounded-2xl bg-white shadow-lg border border-neutral-200">
                 <div className="flex-1 relative p-8">
-                  <div className="flex items-center gap-x-4 mb-4">
-                    <image className="h-12 w-12 rounded-full bg-gray-50 object-cover" src={story.image} alt={`Foto de ${story.author}`} />
-                    <div>
-                      <div className="text-base font-semibold text-stone-900">{story.author}</div>
-                      <div className="text-stone-600 text-sm">{story.stats}</div>
+                    <div className="flex items-center gap-x-4 mb-4">
+                      {/* 1. Contenedor con tamaño, forma y posición relativa */}
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                        <Image 
+                          src={story.image} 
+                          alt={`Foto de ${story.author}`}
+                          fill // 2. Propiedad 'fill' para que llene el contenedor
+                          style={{ objectFit: 'cover' }} // 3. Estilo para que la imagen cubra
+                        />
+                      </div>
+                      <div>
+                        <div className="text-base font-semibold text-stone-900">{story.author}</div>
+                        <div className="text-stone-600 text-sm">{story.stats}</div>
+                      </div>
                     </div>
-                  </div>
                   <blockquote className="text-stone-700">
                     <p>“{story.quote}”</p>
                   </blockquote>

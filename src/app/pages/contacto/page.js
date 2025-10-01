@@ -55,7 +55,7 @@ export default function ContactoPage() {
               <p className="mt-4 text-lg text-stone-600 leading-relaxed">¿Tienes dudas o estás listo para tu próxima gran inversión? Nuestro equipo está a tu disposición.</p>
             </div>
               <div className="h-64 md:h-80 w-full rounded-2xl overflow-hidden shadow-xl">
-                  <image 
+                  <Image 
                       src="/casas/7.jpg" 
                       alt="Equipo de trabajo en oficina moderna" 
                       className="w-full h-full object-cover"

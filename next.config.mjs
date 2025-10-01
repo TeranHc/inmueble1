@@ -7,7 +7,8 @@ const nextConfig = {
       'poolsecuritysolution.com',
       'www.gymtek.com.ec',
       'images.unsplash.com',
-      'image.made-in-china.com' // <-- Añade esta línea
+      'image.made-in-china.com',
+      'randomuser.me', // <-- AÑADE ESTA LÍNEA
     ],
   },
 };
