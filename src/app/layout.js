@@ -1,4 +1,3 @@
-import { CartProvider } from './pages/carrito/CartContext';
 import './globals.css';
 import Header from './components/header';
 import Footer from './components/footer';
