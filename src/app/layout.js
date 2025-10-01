@@ -1,7 +1,6 @@
 import './globals.css';
 import Header from './components/header';
 import Footer from './components/footer';
-import Script from 'next/script';
 
 export const metadata = {
   title: 'Gym RealLeader',
@@ -15,7 +14,6 @@ export default function RootLayout({ children }) {
 
       </head>
       <body className="flex flex-col min-h-screen">
-        <CartProvider>
           <Header className="py-10 lg:py-20">
             
           </Header>
@@ -24,7 +22,6 @@ export default function RootLayout({ children }) {
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
           </Footer>
-        </CartProvider>
       </body>
     </html>
   );
