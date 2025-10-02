@@ -3,7 +3,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 
 export const metadata = {
-  title: 'Gym RealLeader',
+  title: 'Inmueble',
   description: 'Venta de equipos para tu gimnasio ideal',
 };
 
