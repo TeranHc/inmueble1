@@ -50,7 +50,13 @@ export default function ComoFuncionaPage() {
                   </ul>
                 </div>
                 <div className={`rounded-2xl overflow-hidden shadow-xl ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
-                  <Image src={paso.image} alt={paso.titulo} className="w-full h-80 object-cover" />
+                  <Image
+                    src={paso.image}
+                    alt={paso.titulo}
+                    width={1200}
+                    height={800}
+                    className="w-full h-80 object-cover"
+                  />
                 </div>
               </div>
             ))}

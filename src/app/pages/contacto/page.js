@@ -58,7 +58,9 @@ export default function ContactoPage() {
               <div className="h-64 md:h-80 w-full rounded-2xl overflow-hidden shadow-xl">
                   <Image 
                       src="/casas/7.jpg" 
-                      alt="Equipo de trabajo en oficina moderna" 
+                      alt="Equipo de trabajo en oficina moderna"
+                      width={1200}
+                      height={800}
                       className="w-full h-full object-cover"
                   />
               </div>          
